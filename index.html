@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StickArt</title>
+    <style>
+        /* Basic resets and styling */
+       h1, h2, h3, h4, p {
+    margin: 20px 0;  /* Add space between header text and paragraph */
+}
+
+        /* Navbar styling */
+        .nav {
+            position: fixed;  /* Make the navbar stick to the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color:#FFD700;  /* Set the background color to yellow */
+            padding: 10px 0;  /* Add some padding for spacing */
+            text-align: center;
+            z-index: 1000;  /* Ensure the navbar is above other content */
+        }
+
+        .nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;  /* Set the text color to black */
+        }
+
+         #about h1 , #artwork h1 , #contact h1{
+            background-color: #FFD700;  /* Dark Yellow */
+            padding: 10px;  /* Add padding around the text */
+            margin: 10px 0;  /* Add space above and below the text */
+            
+        }
+
+        .nav a:hover {
+            color: orange;  /* Change the text color on hover */
+        }
+
+        /* Header styling */
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/ART5.jpg') no-repeat center center;
+            background-size: cover;
+            padding-top: 60px; /* Ensure content isn't hidden under the navbar */
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 172px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+        }
+
+        /* Flexbox container for images */
+        .flex-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow the items to wrap if the screen is too small */
+    justify-content: space-around;  /* Space out the items evenly */
+    margin: 20px auto;
+    width: 80%;  /* Adjust the width of the flex container */
+}
+
+        .flex-item {
+    width: 100%;
+    max-width: 300px;  /* Set a max-width to avoid large images */
+    position: relative;
+    margin: 10px;  /* Add spacing between the items */
+    box-sizing: border-box;
+}
+
+        .flex-item img {
+    width: 100%;  /* Make sure the images fit inside their containers */
+    height: auto;  /* Keep the image's aspect ratio intact */
+    border-radius: 5px;  /* Optional: Add some rounded corners for the images */
+    object-fit: cover;  /* Ensure the image covers the area of the div */
+}
+
+        /* Button styling */
+        .button {
+            display: flex;
+            justify-content: center;
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #000000;
+        }
+
+        /* Contact and footer sections */
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer h2 {
+            text-decoration: underline;
+        }
+
+        .sizes {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            padding-left: 47%;
+        }
+
+        .sizex {
+            position: relative;
+            padding-top: 5%;
+        }
+          
+        main {
+    padding-top: 80px; /* Ensure content is visible */
+}
+
+    </style>
+</head>
+
+<body>
+<div id="home">
+    <header >
+        <div id="home">
+        <h1>AKASH ARTS</h1>
+        </div>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#artwork">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <h2 id="Home"  align="center">Welcome to Akash Kulyeti's World of Art</h2>
+        <p align="center">Blending tribal heritage with modern creativity through stick art and paintings.</p>
+    </header>
+
+    <main>
+        <div id="about" align="center">
+            <h1 class="head1">About Us</h1>
+            <h2 class="head">Artist Aakash Kulyeti</h2>
+            <img align="center" src="file:///C:/Users/asus/Pictures/kulyeti-removebg-preview.png" alt="Artist Image">
+            <h3>Artist Introduction</h3>
+            <h4>Artistic Journey</h4>
+            <p>Akash Kulyeti, a talented tribal artist from the picturesque region of Gadchiroli, Maharashtra, brings the rich traditions of tribal art into the modern world...</p>
+
+            <h3>Inspiration Behind Working with Sticks</h3>
+            <p>For Akash, sticks are not just materials—they are a representation of nature’s strength and resilience...</p>
+        </div>
+
+        <div id="artwork">
+            <h1 class="head1" align="center">Artist’s Work</h1>
+            <h2 align="center">Explore the Art and Take It Home</h2>
+
+            <div align="center" class="flex-container">
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/ART4.jpg" alt="Image 1">
+                    <h3>Title: Image 1</h3>
+                    <p>Description for Image 1</p>
+                </div>
+
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/r.jpg" alt="Image 2">
+                    <h3>Title: Image 2</h3>
+                    <p>Description for Image 2</p>
+                </div>
+
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG_20240830_171409.jpg" alt="Image 3">
+                    <h3>Title: Image 3</h3>
+                    <p>Description for Image 3</p>
+                </div>
+
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG_20241128_124024.jpg" alt="Image 4">
+                    <h3>Title: Image 4</h3>
+                    <p>Description for Image 4</p>
+                </div>
+                
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG20240806115903.jpg" alt="Image 5">
+                    <h3>Title: Image 5</h3>
+                    <p>Description for Image 1</p>
+                </div>
+
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG_20241128_123842.jpg" alt="Image 6">
+                    <h3>Title: Image 6</h3>
+                    <p>Description for Image 2</p>
+                </div>
+                 
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG20240717131348.jpg" alt="Image 7">
+                    <h3>Title: Image 7</h3>
+                    <p>Description for Image 7</p>
+                </div>
+                
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG20240809072536.jpg" alt="Image 8">
+                    <h3>Title: Image 8</h3>
+                    <p>Description for Image 8</p>
+                </div>
+
+                <div class="flex-item">
+                    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/IMG20240809072149.jpg" alt="Image 9">
+                    <h3>Title: Image 9</h3>
+                    <p>Description for Image 9</p>
+                </div>
+
+
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <div id="contact">
+            <h1 align="center" class="head1">Contact Akash Kulyeti</h1>
+            <p align="center">If you have any questions, inquiries, or custom commission requests, feel free to get in touch!</p>
+            <div class="contact-info">
+                <h2>Contact Details</h2>
+                <p><strong>Email:</strong> <a href="mailto:akashkulyeti@gmail.com">akashkulyeti@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 9421527620</p>
+                <p><strong>Address:</strong> Bhamragad, Gadchiroli, Maharashtra, India</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>Social Media Links:</h2>
+        <div class="sizes">
+<div>            
+<a href="https://www.instagram.com/art_and_crafts_hub?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+    <img src="file:///C:/Users/asus/Pictures/Screenshots/Akash%20Kulyeti/insta.webp" alt="Instagram" style="width: 40px; height: 40px;">
+     </div>
+
+   </a>
+
+                
+            </a>
+        </div>
+        <h2 class="sizex">Made By Anush Ghodmare</h2>
+    </footer>
+
+</body>
+
+</html>
